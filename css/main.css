@@ -1,0 +1,702 @@
+/**************************************************
+    GENERAL STYLES
+ **************************************************/
+
+/* Custom Properties:
+https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+:root {
+    /* Palette */
+    --primary-col: #0084fd;
+    --primary-col-light: #b5ddff;
+    --secondary-col: #9792e4;
+    --secondary-col-light: #d5d4f4;
+    /* Commons */
+    --text-col: #111;
+    --white-col: #fff;
+    --dark-gray: #333;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+Smooth Scrolling
+https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    color: var(--text-col);
+    background: var(--white-col);
+}
+
+/* Evita che l'header vada a sovrapporsi ai
+contenuti delle section quando clicchiamo sui
+link interni con smooth scrolling. */
+section {
+    /* Altezza dell'header */
+    scroll-margin-top: 75px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+/**********************************************************
+    UTILITIES
+ **********************************************************/
+
+/* LAYOUT */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* TEXT */
+.text-center {
+    text-align: center;
+}
+
+.white-text {
+    color: var(--white-col);
+}
+
+.accent-text {
+    color: var(--secondary-col);
+}
+
+.section-title {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+}
+
+/* BORDERS */
+.rounded {
+    border-radius: 20px;
+}
+.rounded-big {
+    border-radius: 50px;
+}
+.rounded-50 {
+    border-radius: 50%;
+}
+
+/* UI */
+.btn {
+    appearance: none;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.6rem 3rem 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--text-col);
+    background: var(--white-col);
+    border: none;
+    cursor: pointer;
+}
+.btn.small {
+    padding: 0.45rem 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+/* Variations */
+.btn.big {
+    padding: 1.2rem 4.5rem 1.3rem;
+    font-size: 1.125rem;
+}
+.btn.small .btn-icon {
+    margin-right: 0.5rem;
+}
+.btn.primary {
+    background: var(--primary-col);
+    color: var(--white-col);
+}
+.btn.accent {
+    background: var(--secondary-col);
+    color: var(--white-col);
+}
+
+.card {
+    padding: 2rem;
+    color: var(--text-col);
+    background: var(--white-col);
+}
+
+
+/****************************************************
+    SITE SECTIONS
+ ****************************************************/
+
+/*
+HEADER
+*/
+.site-header {
+    /* https://www.w3schools.com/howto/howto_css_sticky_element.asp */
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    margin-bottom: 50px;
+    padding: 1rem 2rem;
+    background: var(--primary-col);
+}
+
+.site-header .hamburger {
+    font-size: 1.5rem;
+}
+
+.site-header .main-menu {
+    display: none;
+}
+
+/*
+INTRO SECTION
+*/
+#intro {
+    padding: 0 2rem;
+}
+
+#intro .card {
+    margin-bottom: 1.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    background: var(--primary-col-light);
+}
+
+#intro .card:first-child {
+    padding-bottom: 0;
+}
+
+#intro .card .title,
+#intro .card .icon {
+    color: var(--primary-col);
+}
+
+#intro .card .icon {
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+}
+
+#intro .card .title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+#intro .card .text {
+    font-weight: 600;
+}
+
+#intro .card .btn {
+    margin-top: 2rem;
+}
+
+#intro .card .image {
+    /* rimuove spazi dell'inline-block sul fondo */
+    display: block;
+    max-width: 250px;
+    margin-top: 2rem;
+}
+
+/*
+PLANNING SECTION
+*/
+#planning {
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    color: var(--white-col);
+    background: var(--secondary-col);
+}
+
+#planning .image {
+    display: block;
+    margin: 0 auto;
+}
+
+#planning .title {
+    margin: 5rem 0 3rem;
+    font-size: 2.125rem;
+}
+
+#planning .card {
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+}
+
+#planning .card-title {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+#planning .card-text {
+    font-style: italic;
+    font-size: 1.125rem;
+}
+
+#planning .card .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 2rem auto 0;
+    background: var(--secondary-col);
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+/*
+TESTIMONIALS SECTION
+*/
+#testimonials {
+    padding: 4rem 2rem 5rem;
+    font-size: 1.25rem;
+}
+#testimonials .pre-title {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+#testimonials .text {
+    margin-bottom: 3rem;
+}
+
+#testimonials .card {
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    color: var(--white-col);
+    background: var(--secondary-col);
+}
+
+#testimonials .card-image {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+#testimonials .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#testimonials .card-text {
+    margin-bottom: 1.5rem;
+}
+#testimonials .card-text .icon {
+    font-size: 70px;
+    line-height: 0;
+    vertical-align: bottom;
+}
+
+#testimonials .name {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/*
+BENEFITS SECTION
+*/
+#benefits {
+    margin-bottom: 5rem;
+    padding: 4rem 2rem 2rem;
+    background: var(--secondary-col);
+}
+
+#benefits .section-title {
+    margin-bottom: 4rem;
+}
+
+#benefits .card {
+    margin-bottom: 2rem;
+}
+
+#benefits .card-pre-title,
+#benefits .card-title {
+    margin-bottom: 1.25rem;
+}
+
+#benefits .card-pre-title {
+    font-size: 3rem;
+}
+
+#benefits .card-title {
+    font-size: 1.5rem;
+}
+
+#benefits .card-text {
+    margin-bottom: 1.5rem;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+/*
+ABOUT SECTION
+*/
+#about {
+    padding: 0 2rem 5rem;
+}
+
+#about .section-title {
+    font-size: 3rem;
+}
+
+#about .text p {
+    margin-bottom: 3rem;
+    font-size: 1.125rem;
+    line-height: 2.2;
+}
+
+#about .quote-image {
+    position: relative;
+    width: 180px;
+    margin-bottom: 1rem;
+}
+#about .quote-image .icon {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    line-height: 1;
+    font-size: 14rem;
+}
+#about .quote-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#about .quote-text {
+    margin-bottom: 1.5rem;
+    font-size: 1.875rem;
+}
+
+/*
+BOTTOM BANNER SECTION
+*/
+#bottom-banner {
+    padding: 4rem 2rem;
+    background: var(--secondary-col);
+}
+
+#bottom-banner .title-one {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    color: var(--secondary-col-light);
+}
+
+#bottom-banner .title-two {
+    margin-bottom: 1.5rem;
+    font-size: 1.875rem;
+}
+
+#bottom-banner .title-three {
+    margin-bottom: 1.5rem;
+    font-size: 3.75rem;
+    color: #fdc15f
+}
+
+#bottom-banner .text {
+    max-width: 520px;
+    margin: 0 auto 2rem;
+}
+
+#bottom-banner .btn {
+    color: var(--secondary-col);
+}
+
+#bottom-banner .copy {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 2.5rem 2rem;
+    font-size: 0.875rem;
+    background: var(--dark-gray);
+}
+
+.site-footer .contents {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.site-footer .text-one {
+    margin-bottom: 4rem;
+}
+
+/*******************************************************
+    RESPONSIVE
+ *******************************************************/
+
+/* Tablet */
+@media all and (min-width: 768px) {
+    /* UTILITIES */
+    .container {
+        max-width: 750px;
+    }
+
+    .section-title {
+        font-size: 2.75rem;
+    }
+
+    .btn.big {
+        padding: 1.6rem 5rem 1.7rem;
+        font-size: 1.25rem;
+    }
+
+    /* INTRO SECTION */
+    #intro .cards {
+        display: flex;
+        flex-wrap: wrap;
+        /* Recupero gutters card */
+        margin-left: -.75rem;
+        margin-right: -.75rem;
+    }
+
+    #intro .card {
+        width: calc(33.333% - 1.5rem);
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        padding: 2rem 1.5rem;
+        font-size: 1.125rem;
+    }
+
+    #intro .card:first-child {
+        width: calc(66.666% - 1.5rem);
+    }
+
+    /* PLANNING SECTION */
+    #planning {
+        padding-top: 8rem;
+    }
+
+    #planning .title {
+        margin-top: 8rem;
+        font-size: 4.5rem;
+    }
+
+    #planning .card {
+        padding: 2rem;
+    }
+
+    /* TESTIMONIALS SECTION */
+    #testimonials .card {
+        display: flex;
+        align-items: center;
+    }
+
+    #testimonials .card-image {
+        flex-shrink: 0;
+        margin-right: 2rem;
+    }
+
+    #testimonials .card-contents {
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    /* BENEFITS SECTION */
+    #benefits .cards {
+        display: flex;
+        flex-wrap: wrap;
+        /* Recupero gutters card */
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
+    #benefits .cards .card {
+        width: calc(50% - 2rem);
+        margin: 0 1rem 2rem;
+    }
+
+    #benefits .card-pre-title {
+        font-size: 4.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* ABOUT SECTION */
+    #about .columns {
+        display: flex;
+        /* adatta spaziatura su bordi con gutters colonne */
+        padding: 0 0 1rem;
+    }
+
+    #about .col:first-child,
+    #about .col:last-child {
+        margin: 0 2rem;
+    }
+    #about .col:first-child {
+        width: calc(60% - 4rem);
+    }
+    #about .col:last-child {
+        width: calc(40% - 4rem);
+    }
+
+    #about .section-title {
+        font-size: 4.5rem;
+    }
+
+    #about .quote-image {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* BOTTOM BANNER SECTION */
+    #bottom-banner .title-two {
+        font-size: 3rem;
+    }
+
+    #bottom-banner .title-three {
+        font-size: 6rem;
+    }
+
+    #bottom-banner .text {
+        font-size: 1.125rem;
+    }
+
+    #bottom-banner .copy {
+        font-size: 1rem;
+    }
+
+    /* FOOTER */
+    .site-footer {
+        font-size: 1rem;
+    }
+}
+
+/* Desktop */
+@media all and (min-width: 992px) {
+    /* UTILITIES */
+    .container {
+        max-width: 940px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    /* HEADER */
+    .site-header .hamburger {
+        display: none;
+    }
+
+    .site-header .main-menu {
+        display: block;
+    }
+
+    .site-header .main-menu li {
+        list-style: none;
+        margin-left: 2rem;
+    }
+
+    .site-header .main-menu a {
+        text-decoration: none;
+        font-size: 1.125rem;
+    }
+
+    /* INTRO SECTION */
+    #intro .card:first-child {
+        display: flex;
+    }
+
+    #intro .card:first-child > * {
+        width: 50%;
+    }
+
+    #intro .card:first-child .image {
+        align-self: flex-end;
+        margin: 2rem auto 0;
+    }
+
+    /* PLANNING SECTION */
+    #planning .columns {
+        display: flex;
+    }
+
+    #planning .col {
+        width: calc(50% - 4rem);
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #planning .col:last-child {
+        align-self: flex-end;
+    }
+
+    #planning .title {
+        font-size: 2.125rem;
+    }
+
+    #planning .card-img {
+        max-width: 250px;
+    }
+
+    /* TESTIMONIALS SECTION */
+    #testimonials .card-image {
+        margin-right: 4rem;
+    }
+
+    /* BENEFITS SECTION */
+    #benefits .cards .card {
+        width: calc(100% / 3 - 2rem);
+        margin: 0 1rem 2rem;
+    }
+
+    /* ABOUT SECTION */
+    #about .col:first-child,
+    #about .col:last-child {
+        margin: 0 3rem;
+    }
+    #about .col:first-child {
+        width: calc(70% - 6rem);
+    }
+    #about .col:last-child {
+        width: calc(30% - 6rem);
+    }
+}
+
+/* Large Desktop */
+@media all and (min-width: 1200px) {
+    /* UTILITIES */
+    .container {
+        max-width: 1140px;
+    }
+
+    /* PLANNING SECTION */
+    #planning .columns {
+        max-width: 940px;
+    }
+
+    /* ABOUT SECTION */
+    #about .text p {
+        font-size: 1.25rem;
+    }
+
+    #about .quote-image .icon {
+        font-size: 18rem;
+    }
+}

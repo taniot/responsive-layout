@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex Responsive Layout</title>
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+            integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Main Styles -->
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+
+    <body>
+        <!--
+        HEADER
+        -->
+        <header class="site-header">
+            <div class="container flex space-between align-center">
+                <a class="site-brand" href="#">
+                    <img src="img/logo.png" alt="Site name" />
+                </a>
+                <span class="hamburger white-text">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <nav class="main-menu">
+                    <ul class="flex align-center">
+                        <li>
+                            <a class="white-text" href="#planning">Planning</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#benefits">Features</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#about">About Us</a>
+                        </li>
+                        <li>
+                            <a class="btn small rounded" href="#bottom-banner"
+                                >Get Started</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!--
+        MAIN CONTENT
+        -->
+        <main>
+            <!-- Intro section -->
+            <section id="intro">
+                <div class="container">
+                    <div class="cards">
+                        <div class="card rounded">
+                            <div class="contents">
+                                <h3 class="title">Get a demo application</h3>
+                                <p class="text">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Ratione nobis, architecto
+                                    ad dolore quod, facere totam quas recusandae
+                                    blanditiis.
+                                </p>
+                                <a href="#" class="btn primary rounded">
+                                    <i class="fa-brands fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                            <img
+                                class="image"
+                                src="./img/phone.png"
+                                alt="lorem ipsum"
+                            />
+                        </div>
+                        <div class="card rounded text-center">
+                            <i class="icon fa-solid fa-file-code"></i>
+                            <h3 class="title">Clean Code</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ratione nobis, architecto ad
+                                dolore quod, facere totam quas recusandae
+                                blanditiis.
+                            </p>
+                        </div>
+                        <div class="card rounded text-center">
+                            <i class="icon fa-solid fa-compass-drafting"></i>
+                            <h3 class="title">Web Design</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ratione nobis, architecto ad
+                                dolore quod, facere totam quas recusandae
+                                blanditiis.
+                            </p>
+                        </div>
+                        <div class="card rounded text-center">
+                            <i class="icon fa-solid fa-laptop-code"></i>
+                            <h3 class="title">Developement</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ratione nobis, architecto ad
+                                dolore quod, facere totam quas recusandae
+                                blanditiis.
+                            </p>
+                        </div>
+                        <div class="card rounded text-center">
+                            <i class="icon fa-solid fa-bullhorn"></i>
+                            <h3 class="title">Branding</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ratione nobis, architecto ad
+                                dolore quod, facere totam quas recusandae
+                                blanditiis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Planning section -->
+            <section id="planning">
+                <div class="container columns">
+                    <div class="col">
+                        <img
+                            class="image"
+                            src="./img/planning1.png"
+                            alt="planning lorem ipsum"
+                        />
+                        <h2 class="title">Strategic Planning</h2>
+                        <p class="text">
+                            Egestas dui id ornare arcu odio. In tellus integer
+                            feugiat scelerisque varius morbi enim nunc.
+                            Habitasse platea dictumst quisque sagittis. Interdum
+                            velit euismod in pellentesque massa placerat duis.
+                            Quis viverra nibh cras pulvinar mattis.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <div class="card rounded-big text-center">
+                            <img
+                                src="./img/planning2.png"
+                                alt="planning lorem ipsum"
+                                class="card-img"
+                            />
+                            <h3 class="card-title">App Developement</h3>
+                            <p class="card-text">
+                                Develop an on-demand app for your delivery
+                                business to reach your targeted customers
+                                without any interruption.
+                            </p>
+                            <i class="icon fa-solid fa-arrow-down-long"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials section -->
+            <section id="testimonials" class="text-center">
+                <div class="container">
+                    <h4 class="pre-title">Testimonials</h4>
+                    <h2 class="section-title accent-text">
+                        We are committed expert partners
+                    </h2>
+                    <p class="text">
+                        We place huge value on strong relationships and have
+                        seen the benefit they bring to our business. Customer
+                        feedback is vital in helping us to get it right.
+                    </p>
+                    <!-- Cards -->
+                    <div class="card rounded-big">
+                        <!-- Spunto per object-fit -->
+                        <figure class="card-image rounded-50">
+                            <img
+                                src="./img/testimonial1.jpg"
+                                alt="Nat Reynolds"
+                            />
+                        </figure>
+                        <div class="card-contents">
+                            <p class="card-text">
+                                <!-- Oppure in alternativa pseudo elementi -->
+                                <span class="icon">&ldquo;</span>
+                                Vitae suscipit tellus mauris a diam maecenas sed
+                                enim ut. Mauris augue neque gravida in
+                                fermentum. Praesent semper feugiat nibh pulvinar
+                                proin.
+                                <span class="icon">&rdquo;</span>
+                            </p>
+                            <div class="name">Nat Reynolds</div>
+                        </div>
+                    </div>
+                    <div class="card rounded-big">
+                        <!-- Spunto per object-fit -->
+                        <figure class="card-image rounded-50">
+                            <img
+                                src="./img/testimonial2.jpg"
+                                alt="Celia Almeda"
+                            />
+                        </figure>
+                        <div class="card-contents">
+                            <p class="card-text">
+                                <!-- Oppure in alternativa pseudo elementi -->
+                                <span class="icon">&ldquo;</span>
+                                Pharetra vel turpis nunc eget lorem. Quisque id
+                                diam vel quam elementum pulvinar etiam. Urna
+                                porttitor rhoncus dolor purus non enim praesent
+                                elementum.
+                                <span class="icon">&rdquo;</span>
+                            </p>
+                            <div class="name">Celia Almeda</div>
+                        </div>
+                    </div>
+                    <div class="card rounded-big">
+                        <!-- Spunto per object-fit -->
+                        <figure class="card-image rounded-50">
+                            <img
+                                src="./img/testimonial3.jpg"
+                                alt="Bob Roberts"
+                            />
+                        </figure>
+                        <div class="card-contents">
+                            <p class="card-text">
+                                <!-- Oppure in alternativa pseudo elementi -->
+                                <span class="icon">&ldquo;</span>
+                                Mauris augue neque gravida in fermentum.
+                                Praesent semper feugiat nibh sed pulvinar proin.
+                                Nibh nisl condimentum id venenatis a
+                                condimentum.
+                                <span class="icon">&rdquo;</span>
+                            </p>
+                            <div class="name">Bob Roberts</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits section -->
+            <section id="benefits">
+                <div class="container">
+                    <h2 class="section-title white-text text-center">
+                        Benefits of working with us
+                    </h2>
+
+                    <!-- Cards -->
+                    <div class="cards">
+                        <div class="card rounded">
+                            <h4 class="card-pre-title accent-text">01</h4>
+                            <h3 class="card-title accent-text">
+                                Hight Quality
+                            </h3>
+                            <p class="card-text">
+                                Vitae suscipit tellus mauris a diam maecenas sed
+                                enim ut. Mauris augue neque gravida in
+                                fermentum. Praesent semper feugiat nibh sed
+                                pulvinar proin id venenatis.
+                            </p>
+                            <a class="btn accent rounded" href="#">more</a>
+                        </div>
+                        <div class="card rounded">
+                            <h4 class="card-pre-title accent-text">02</h4>
+                            <h3 class="card-title accent-text">
+                                Creative Team
+                            </h3>
+                            <p class="card-text">
+                                Vitae suscipit tellus mauris a diam maecenas sed
+                                enim ut. Mauris augue neque gravida in
+                                fermentum. Praesent semper feugiat nibh sed
+                                pulvinar proin id venenatis.
+                            </p>
+                            <a class="btn accent rounded" href="#">more</a>
+                        </div>
+                        <div class="card rounded">
+                            <h4 class="card-pre-title accent-text">03</h4>
+                            <h3 class="card-title accent-text">
+                                Amazing Results
+                            </h3>
+                            <p class="card-text">
+                                Vitae suscipit tellus mauris a diam maecenas sed
+                                enim ut. Mauris augue neque gravida in
+                                fermentum. Praesent semper feugiat nibh sed
+                                pulvinar proin id venenatis.
+                            </p>
+                            <a class="btn accent rounded" href="#">more</a>
+                        </div>
+                        <div class="card rounded">
+                            <h4 class="card-pre-title accent-text">04</h4>
+                            <h3 class="card-title accent-text">Best Pricing</h3>
+                            <p class="card-text">
+                                Vitae suscipit tellus mauris a diam maecenas sed
+                                enim ut. Mauris augue neque gravida in
+                                fermentum. Praesent semper feugiat nibh sed
+                                pulvinar proin id venenatis.
+                            </p>
+                            <a class="btn accent rounded" href="#">more</a>
+                        </div>
+                        <div class="card rounded">
+                            <h4 class="card-pre-title accent-text">05</h4>
+                            <h3 class="card-title accent-text">Innovations</h3>
+                            <p class="card-text">
+                                Vitae suscipit tellus mauris a diam maecenas sed
+                                enim ut. Mauris augue neque gravida in
+                                fermentum. Praesent semper feugiat nibh sed
+                                pulvinar proin id venenatis.
+                            </p>
+                            <a class="btn accent rounded" href="#">more</a>
+                        </div>
+                        <div class="card rounded">
+                            <h4 class="card-pre-title accent-text">06</h4>
+                            <h3 class="card-title accent-text">24/7 Support</h3>
+                            <p class="card-text">
+                                Vitae suscipit tellus mauris a diam maecenas sed
+                                enim ut. Mauris augue neque gravida in
+                                fermentum. Praesent semper feugiat nibh sed
+                                pulvinar proin id venenatis.
+                            </p>
+                            <a class="btn accent rounded" href="#">more</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section id="about">
+                <div class="container">
+                    <div class="columns">
+                        <div class="col">
+                            <h2 class="section-title accent-text">About Us</h2>
+                            <div class="text">
+                                <p>
+                                    Sample text. Click to Egestas egestas
+                                    fringilla phasellus faucibus scelerisque
+                                    eleifend donec pretium vulputate. Pharetra
+                                    magna ac placerat vestibulum. Quam lacus
+                                    suspendisse faucibus interdum posuere lorem.
+                                    Egestas tellus rutrum tellus pellentesque eu
+                                    tincidunt. Neque vitae tempus quam
+                                    pellentesque nec. Vel elit scelerisque
+                                    mauris pellentesque pulvinar pellentesque
+                                    habitant morbi. Interdum velit euismod in
+                                    pellentesque massa placerat duis.
+                                </p>
+                                <p>
+                                    Quis viverra nibh cras pulvinar mattis.
+                                    Ornare arcu dui vivamus arcu felis bibendum
+                                    ut tristique. Pellentesque eu tincidunt
+                                    tortor aliquam nulla facilisi cras fermentum
+                                    odio. Dignissim diam quis enim lobortis
+                                    scelerisque. Tellus molestie nunc non
+                                    blandit massa enim. the text box. Click
+                                    again or double click to start editing the
+                                    text.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="quote">
+                                <figure class="quote-image">
+                                    <img
+                                        src="./img/about.jpg"
+                                        alt="About lorem ipsum"
+                                    />
+                                    <span class="icon accent-text"
+                                        >&ldquo;</span
+                                    >
+                                </figure>
+                                <h4 class="quote-text accent-text">
+                                    I help companies tincidunt tortor aliquam
+                                    nulla facilisi cras fermentum odio.
+                                </h4>
+                                <a class="btn small accent rounded" href="#">
+                                    <i
+                                        class="btn-icon fa-brands fa-linkedin"
+                                    ></i>
+                                    Find me on linkedin
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Banner -->
+            <section id="bottom-banner" class="white-text text-center">
+                <h5 class="title-one">Get Started</h5>
+                <h2 class="title-two">Simple, Transparent Pricing</h2>
+                <h3 class="title-three">It's Free!</h3>
+                <p class="text">
+                    We’re still in beta and we will be for awhile. As we add
+                    more functionality, we’ll look into other plans with more
+                    controls.
+                </p>
+                <a class="btn big rounded-big" href="#">Get Started</a>
+                <div class="copy">
+                    Copyright 2021 Boolean • Classe XX •
+                    <a class="white-text" href="#">Privacy policy</a>
+                </div>
+            </section>
+        </main>
+
+        <!--
+        FOOTER
+        -->
+        <footer class="site-footer text-center white-text">
+            <div class="contents">
+                <div class="text-one">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Commodi maiores minima vitae vero nulla pariatur impedit!
+                </div>
+                <div class="text-two">
+                    <a class="accent-text" href="#">Lorem ipsum</a>
+                    scelerisque mauris pellentesque
+                    <a class="accent-text" href="#">Boolean careers</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
